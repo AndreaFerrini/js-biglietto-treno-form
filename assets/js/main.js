@@ -11,3 +11,19 @@
 // MILESTONE 2:
 // Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 // Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
+
+function compilazione(){
+
+    let chilometri = document.getElementById("km").value;
+
+    let etaPersona = parseInt(document.getElementById("eta").value);
+
+    let nomeCognome = document.getElementById("nome").value;
+
+    let prezzoBiglietto = parseFloat(chilometri * tariffaChilometro).toFixed(2);
+
+    let sconto20 = (prezzoBiglietto / 100 ) * 20;
+
+    let sconto40 = (prezzoBiglietto / 100) * 40;
+
+    let offerta = document.getElementById("offerta");
